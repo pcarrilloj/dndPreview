@@ -11,7 +11,7 @@
 //clousure
 (function ($) {
     'use strict';
-    var holder = $('#holder'),
+    var holder = document.getElementById('holder'),
         tests = {
             filereader: typeof FileReader !== 'undefined',
             dnd: document.createElement('span').hasOwnProperty('draggable')
