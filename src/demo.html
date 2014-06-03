@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>demo</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../src/dndpreview.js"></script>
+    <link rel="stylesheet" href="../src/dndpreview.css">
+</head>
+<body>
+    <div> drag and drop an image file </div>
+    <div id="dnd"></div>
+    <div>fallback</div>    
+    <div id="dndFalback"></div>
+    <script type="text/javascript">
+        $(function(){
+           $("#dnd").dndPreview({remote: "http://decompras.desarrollo.com/registrate/?d=4"});
+           $("#dndFalback").dndPreview({fallback : true, //force fallback
+                  remote: "/dev/null"
+                 });
+        });
+    </script>
+</body>
+</html>
